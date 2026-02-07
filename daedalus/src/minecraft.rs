@@ -592,6 +592,7 @@ pub enum ArgumentType {
     Game,
     /// The argument is passed to the JVM
     Jvm,
+    #[serde(rename = "default-user-jvm")]
     /// Default JVM arguments that users can customize
     DefaultUserJvm,
 }
