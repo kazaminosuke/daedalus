@@ -84,7 +84,7 @@ pub enum MinecraftJavaProfile {
     MinecraftJavaExe,
     /// Java 21
     JavaRuntimeDelta,
-
+    /// Java 25
     JavaRuntimeEpsilon,
     #[serde(untagged)]
     /// Unknown
