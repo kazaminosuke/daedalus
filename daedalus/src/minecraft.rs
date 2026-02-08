@@ -103,6 +103,7 @@ impl MinecraftJavaProfile {
                 Ok("java-runtime-gamma-snapshot")
             }
             MinecraftJavaProfile::JavaRuntimeDelta => Ok("java-runtime-delta"),
+            MinecraftJavaProfile::JavaRuntimeEpsilon => Ok("java-runtime-epsilon"),
             MinecraftJavaProfile::MinecraftJavaExe => Ok("minecraft-java-exe"),
             MinecraftJavaProfile::Unknown(value) => {
                 Err(Error::InvalidMinecraftJavaProfile(value.to_string()))
@@ -124,6 +125,7 @@ impl TryFrom<&str> for MinecraftJavaProfile {
                 Ok(MinecraftJavaProfile::JavaRuntimeGammaSnapshot)
             }
             "java-runtime-delta" => Ok(MinecraftJavaProfile::JavaRuntimeDelta),
+            "java-runtime-epsilon" => Ok(MinecraftJavaProfile::JavaRuntimeEpsilon),
             "minecraft-java-exe" => Ok(MinecraftJavaProfile::MinecraftJavaExe),
             _ => Err(Error::InvalidMinecraftJavaProfile(value.to_string())),
         }
